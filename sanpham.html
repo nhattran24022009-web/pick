@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh Sách Sản Phẩm</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      padding-top: 70px; /* Để trống cho navbar */
+      color: #333;
+    }
+
+    /* ======= NAVBAR ======= */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: #130d0d;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #eef1f5;
+      text-decoration: none;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #e6dede;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #007bff;
+    }
+
+    .navbar .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        display: none;
+        padding: 10px 0;
+      }
+
+      .navbar ul.show {
+        display: flex;
+      }
+
+      .navbar .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* ======= PRODUCT LIST ======= */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 6px;
+      background-color: #fafafa;
+      text-align: center;
+      transition: box-shadow 0.3s;
+    }
+
+    .product:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .product .price {
+      color: #e53935;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 500;
+    }
+
+    /* Pagination */
+    .pagination {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .pagination button {
+      padding: 8px 14px;
+      margin: 0 4px;
+      border: none;
+      background-color: #eee;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .pagination button.active {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+    }
+
+    .pagination button:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar">
+    <a href="#" class="logo">Shop Sport</a>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <ul id="nav-links">
+      <li><a href="#">Trang Chủ</a></li>
+      <li><a href="#">Sản Phẩm</a></li>
+      <li><a href="#">Giới Thiệu</a></li>
+      <li><a href="#">Liên Hệ</a></li>
+    </ul>
+  </nav>
+
+  <!-- ======= PRODUCT LIST ======= -->
+  <div class="container">
+    <h1>Danh Sách Sản Phẩm</h1>
+    <div class="product-grid" id="product-list">
+      <!-- Sản phẩm sẽ được render bằng JavaScript -->
+    </div>
+
+    <div class="pagination" id="pagination">
+      <!-- Nút phân trang -->
+    </div>
+  </div>
+
+  <!-- ======= SCRIPT ======= -->
+  <script>
+    // Toggle menu mobile
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("show");
+    }
+
+    // Tạo danh sách giả lập 50 sản phẩm
+    const products = Array.from({ length: 50 }, (_, i) => ({
+      id: i + 1,
+      name: `Sản Phẩm ${i + 1}`,
+      price: `${(1000 + i * 10).toLocaleString()}₫`,
+      image: `https://via.placeholder.com/300x200?text=SP+${i + 1}`,
+      link: `chi-tiet-san-pham.html?id=${i + 1}`
+    }));
+
+    const productsPerPage = 10;
+    const totalPages = Math.ceil(products.length / productsPerPage);
+    const productListEl = document.getElementById("product-list");
+    const paginationEl = document.getElementById("pagination");
+
+    let currentPage = 1;
+
+    function renderProducts(page) {
+      productListEl.innerHTML = "";
+      const start = (page - 1) * productsPerPage;
+      const end = start + productsPerPage;
+      const items = products.slice(start, end);
+
+      items.forEach((product) => {
+        const el = document.createElement("div");
+        el.className = "product";
+        el.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <div class="price">${product.price}</div>
+          <a href="${product.link}">Xem chi tiết</a>
+        `;
+        productListEl.appendChild(el);
+      });
+    }
+
+    function renderPagination() {
+      paginationEl.innerHTML = "";
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        if (i === currentPage) btn.classList.add("active");
+        btn.addEventListener("click", () => {
+          currentPage = i;
+          renderProducts(currentPage);
+          renderPagination();
+        });
+        paginationEl.appendChild(btn);
+      }
+    }
+
+    // Khởi tạo
+    renderProducts(currentPage);
+    renderPagination();
+  </script>
+
+</body>
+</html>
