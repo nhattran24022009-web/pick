@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng ký & Đăng nhập</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="bos.css">
+  <style>
+    body {
+      padding-top: 56px;
+    }
+
+    .hero {
+      background-color: #f5f5f5;
+      padding: 60px 0;
+    }
+
+    .product-img {
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"> Shop Sport </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+        
+          <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#product">Sản phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="#order">Đặt hàng</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
+          <a href="http://127.0.0.1:5500/banhang/dnhap.html"><i class="fa-solid fa-circle-user"></i><a href="dnhap.html"></i></a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1 class="display-4">Chuyên đồ  Chính Hãng</h1>
+      <p class="lead">Vợt, dày ,bóng, lưới và phụ kiện chất lượng cao cho mọi cấp độ</p>
+      <a href="#products" class="btn btn-primary btn-lg mt-3">Xem sản phẩm</a>
+    </div>
+  </section>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://theme.hstatic.net/1000341630/1001071096/14/slideshow_3.jpg?v=1319" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://theme.hstatic.net/1000341630/1001071096/14/slideshow_2.jpg?v=1319" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://theme.hstatic.net/1000341630/1001071096/14/slideshow_7.jpg?v=1319" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+  <!-- Products Section -->
+  <section id="products" class="py-5">
+
+    </div>
+    <div class="container">
+      <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://wikasports.com/wp-content/uploads/2024/11/vot-pickleball-wika-carbon-pro-1-600x600.jpg"
+              class="card-img-top product-img" alt="Vợt Carbon">
+            <div class="card-body">
+              <h5 class="card-title">Vợt Carbon Pro</h5>
+              <p class="card-text">Vợt nhẹ, độ bền cao, dành cho người chơi chuyên nghiệp.</p>
+              <p class="text-danger fw-bold">1.200.000đ</p>
+              <a href="#order" class="btn btn-outline-primary">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://wikasports.com/wp-content/uploads/2024/12/bong-pickleball-wika-w-pro-6-600x600.jpg"
+              class="card-img-top product-img" alt="Bóng Pickleball">
+            <div class="card-body">
+              <h5 class="card-title">Bóng Pickleball (Hộp 3 quả)</h5>
+              <p class="card-text">Chất liệu nhựa dẻo bền, đạt chuẩn thi đấu.</p>
+              <p class="text-danger fw-bold">250.000đ</p>
+              <a href="#order" class="btn btn-outline-primary">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img
+              src="data:image/jpeg;base64,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"
+              class="card-img-top product-img" alt="Túi vợt">
+            <div class="card-body">
+              <h5 class="card-title">Túi Vợt Thể Thao</h5>
+              <p class="card-text">Chứa được 2 vợt, 1 hộp bóng, chống nước, quai đeo tiện lợi.</p>
+              <p class="text-danger fw-bold">390.000đ</p>
+              <a href="#order" class="btn btn-outline-primary">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img
+              src="https://product.hstatic.net/1000341630/product/v_t_alpha_004_fce68d0fe12445c8a98ca3e02c13efc3_master.jpg"
+              alt="" class="card-img-top product-img">
+            <div class="card-body">
+              <h5 class="card-title">Vợt Pickleball Kamito Alpha</h5>
+              <p class="text-danger fw-bold">3.900.000đ</p>
+              <a href="#order" class="btn btn-outline-primary">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img
+              src="https://i.ebayimg.com/images/g/ZdEAAOSweJpms4lm/s-l1600.webp"
+              alt="" class="card-img-top product-img">
+            <div class="card-body">
+              <h5 class="card-title"> Giày Babolat Jet Mach 3 </h5>
+              <p class="text-danger fw-bold">4.500.000đ</p>
+              <a href="#order" class="btn btn-outline-primary">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEg8PEhEQEhEWFxIQEBYQFhUVFRIVFhUWFhUSFRMYHSggGBolGxUVITEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGhAQFy0lHyU1My03LTc3Li0rLS4rNy0rLy8vMC0rLi0rKzUtLS0tLy03Ny0tNystNSs1MC0tLSs1Nf/AABEIAP8AxgMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwECBAUGAwj/xABHEAACAQICBgYFCAcGBwAAAAAAAQIDEQQhBRIxQVFhBgcTInGBQlKhscEjMmJykZLR4TNTZLKz0vAUFSSCo8IXNENjc3Si/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAEEAgMF/8QALxEBAQABAgIHBQkAAAAAAAAAAAECAxEEMRIhQWFxkbETIlGh0QUkMkJygaLB8P/aAAwDAQACEQMRAD8AnEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEutHrElVlPA4OVqecatSPp8bP1Pf4Adp0q60MFgW4Rf9oqr0abWonwdTP2JkfY7rox02+xoUacd14ty+9KVn9iI9hRs9Z96W+Us2evZ5X2fG4HVy619LevBf5KP8pdDra0st9KXjCn8LHJUWk7vntVz0lUjeWStbLJLPyA6mXW5pZ/ql4Qp/Et/wCLWl+NP7lI5ftI6qyTed8l5Bzjw9nL8QOrh1u6WX6l+MIfBo2mjOu7FQaWJwtGpHK7p69JpcbtzTfLIjkAfSfRPp7gtJWhSqOFa1+xrWjU56ubjNfVbtvsdQfIChqtSi3GSaktVtWad1JNZxaed0Tf1WdYjxWrgMZL/EWtQquy7dJXdOe5VUs7+kk96zCUAAAAAAAAAAAAAAAAAABw/W30k/sWDlCDtVrXpx5R9N+1Lwb4Hz7RpvNvOT70m+L4skDrwxrqY+nR9GnCKa5217/6lvI4Ob3bl7XxArdLZm+O7yRSTy83f7F+ZZcXAoA0ABQAACjAFS/DyalFxk4yTjKEo5OEou8Jp7mmkyxRb2f1nb4o96mDqRsnF57LWfuA+legun/7wwVDESsqudLEJbI1oPVnZbk33lykjfkSdRmNanj8P6Mo4fFRX0pKVOo/shTJbAAAAAAAAAAAAAAAAA+d+tdP+88TLnBf6cfwOPntfDcdx1tQ/wAdiX9Kn/CicNf7P62BaoLlWvNf1tLQgVZaVAAFAAKADIwiz+6n9+Ju6uulLV1c/Wb7qst1s87mBorASqU69ZOCjT1NbWclJrOo3GytlGnJ5tcjKlRhDPXnBZ5KbUW9tne/vLB3HUvG2MfB4PPyq07e9kzkQ9TsLYlP9ij7akCXiLQABAAAAAAAAAAAAABBPWxSvi8T9an/AAoEeSW/aiTOtaNsTiH9Kn/BgRipWDvObbFyuT5P2fkMnsyfDd5MtYcDQKyeS+wW37PiBSJQrJ/YWgAABvtC1lHDYyGx1HShdK+TbVmlOLteS4rNZHhRrqDnQm1JJdxyXK6TXuMPA1Gr5ySvBtK9n3kndbzMxGkbOcLXVnFO+y8eFuZepbt1bJS6ooWrJ/sdH2yRKpGXVND5S/7Jh/a/yJNI6zm1AAHAAAAAAAAAAAAAAhfraVq9d/SpfwoEVkr9b2VSs/pUtuXoQW0ieStk9oe2tNuj4QLtbc8+HFFgbDxektz8lwXLxLGykXYuyezJ8Nz8GBbcpcMAAUAGThqurd8HCXjaVzb1616blFa0XGSvezimnnZ+1GnwravLVcopwlOyuklK+e5bN5sJR1YTnSzpyjLWjwy+dH4r8rWKmLqpjm//AFcJ/u/AkYj7quWc+WHwfuqEgnMe3ETbU28PSAAK8AAAAAAAAAAAAABDPXJ86v40f3YEUqpuauvavB/DYSt1xta9a97XpbPqwIoqQtntW5rZ4cnyJGricduh+mKyhvTuvd4rcWCMms1tLspcIv8A+X/L7vArMsuA1bJ7QEXxetlv9Hy3Hnc9KD7ye5d5+X9W8zzQVdTg5NRinKTySim23wSW02+KodhGlGrQ+TlFOU4xSmptzb1Kqyckrdxtru7m9ZazDvKrnbuNeTlFNLxTa8GzNw9VKNKXaU4x1XRqwnr/ACkYzlLVcYReWrONntTzVmiGzZaHqdhTxEFUknOWFnCdLWTlT7X58XffmrZNOLi96PDS+JqzdWShFQce87JX7velZPK7u7czHqzpQUqEalSUoTc6U5qMYRa2w2u6lZZu1pJZK7KVq/a0pSjJxaTU47U8tnLxLIvUm7qv+dX5UMGvZVO+OA6rHd4r/wAeDXsrHfkjVx8217O6ekAAVjAAAAAAAAAAAAAEL9dCtUq81Sf7q+BFEZtbPPg+TW8mrrmwLk4zS+fSaXOVOWt/uiQmyRt4v8OlnO3GTytj0snmsnta9+q/h7zzYUrZ+ZdVVpSXNlY+c3VlnGL4Nx8smve/YUUd7yXv8FvK6ySS2vbnsTfv2L8yxu+0OrsulPclZe1+LLAA5tXQm4u68HfNNcGi5Sj6j5rWeq7bMrXt5nkLgmVhLN392RWL1U7ZXTT5ooe2Dw7q1KdJenKMPC7s35IElt2ifuqqP/Nvlho/ZGp+J35xvVlh7UcTW3VK0tT6tOMYfvKa8jsiRs+0b95y7tp5SQABWIAAAAAAAAAAAAAc/wBNtEPFYaSgr1Kb7WmltlZNSivFN25pHzdprA9jUdl3Jd6D3W3x8vdY+sSNOsPoUpKpiKUNanJudaEVeVOW+tBb1tbXi803aN/D3HW0/YZXa88b39s/f1QWoW7z2blvl+XMscr5vfmzO0po6dF3l3ov5s1mpcM9z5GAysmphlhlcMptYAoLh5qgyMTgatKNOc6c4RnfUcla9rbtqyaee1NPY0zGAXBQqBVHV9CtDzm1WUbzk+wwifpVJZSn9WKvd/W4GPoXo1KepVrqcKUmlTgk+1rt7Iwgs0nx28OJOfQvow8PbEVoRjV1dSjSjbVw1P1VbJzdldrhZb2436Gn7GTX1J4T436R0OhtHxw1Cjh45qEVG/rPbKT5t3fmZgBWHLK5W28wABAAAAAAAAAAAAAAAAHG9KOgtPEa9ShqU6krudOa+Rqt7bpfMlzStxTeZDHSLohUoTlGMJU5rN0qm1r1qc9k4+fnuPpkwtK6Lo4qHZ1qanHar5Si/WhJZxfNEbcOKmWMw150p8fzTwvbO6vkmcWm0001k01Zp8GiiW4lXrA6COj37udN92lWt3oPdTrJbU9z2eDycW1IypycWrSi7NPPMrz1+H9nJljd8byv9X4Vm4+rVnCnGc4ONOOrBKyslZWWXJZbMnvvfXmXiqvdSVSM721koarjlF7fFteRkaB0Q8VNrWVOlBa9ao9kI/FvchXjjjlqZTGTe1j6M0dVxM1TpQc5b7bIr1pS2JEidEOhGtJOlGOIqp2nWqJrDUHvUP1s1y5fNOu6I9CYypwc4SoYXbCisqlf/uYie1J+os+PAkPD0I04xpwjGEIpRjGCSjFLYklkkTm176XD8vez/jPrfk1GgejNLCvtG3WxDVpVqltbPbGEdlOPJebZuwCsmpqZamXSyu9AAHAAAAAAAAAAAAAAAAAAAAAAwdOYPt8PiKPr05xXi07e2xCOP0Fg5yoynWheUflGoTm6bVtWLUJbc2rbtXwRPhr6+GhrN6sbvN5R+3NHWNk7G/hOMmjjcM8d5evbq57bdsqBFoHBWd5qLte3Zzfez7l1Plt5rbu6Dodomi8VhsNRqKpR7R4irFU5R/RpOLm53ck3qq2zIlSrSjZ9yn91F+gKUVGpJRim5O+qksrROrlLOX+8mvP7T0ejehpbWyzf3e3wwl+baAA83xQAAAAAAAAAAAAAAAAAAAAAAAAAADFxCzZlGl6Q6KjilGE5TjFPX+TaTb1ZRtdr6QHtW2M9NC/o39Z/A1FXC4mPayWIjNSlOcY1aaShFx7tJSi7/Oz1nfLdvNl0b7TsflNTX1pX7O6i9maTzA2oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYtf53kZRiYnaBi19jPbQv6N/Wl8DwxD7svA9tCfo/8AMwNgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGHiV3jMNLpNYmM6tSko1oqCUKLkqblUurt1GnZWvn7N4F+IXdZ76E/Rv60vgazFY+UU1PD1+F4JVI5KLcrp3SV7ZpN2dk0rmd0dr69OTtJd+WU04vhez3XT8QNqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGmnfPxMwx6uDjK7zi3tcXa/wAAMWu7J5nnoOTvVv8AR+J7y0XF/wDUq24Xj+FzJw2FhTVoRstr2tvxbzYHsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/9k="
+          alt="" class="card-img-top product-img">
+        <div class="card-body">
+          <h5 class="card-title">Vợt Pickleball Sypik Avatar Ultimate Pro </h5>
+          <p class="text-danger fw-bold">4.300.000đ</p>
+          <a href="#order" class="btn btn-outline-primary">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Product 7 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img
+          src="https://cdn.hstatic.net/products/1000341630/_ma_gia_dink_trang_2x_bd99555f43434f4297662907cdbb1e2b_master.jpg"
+          alt="" class="card-img-top product-img">
+        <div class="card-body">
+          <h5 class="card-title">Giày Pickleball Kamito Dink</h5>
+          <p class="text-danger fw-bold">2.500.000đ</p>
+          <a href="#order" class="btn btn-outline-primary">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+   
+
+  </section>
+
+  <!-- Order Section -->
+  <section id="order" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Đặt hàng ngay</h2>
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Họ và tên" required>
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" placeholder="Số điện thoại" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Địa chỉ giao hàng" required>
+        </div>
+        <div class="mb-3">
+          <select class="form-select" required>
+            <option selected disabled>Chọn sản phẩm</option>
+            <option>Vợt Carbon Pro</option>
+            <option>Bóng Pickleball</option>
+            <option>Túi Vợt Thể Thao</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="3" placeholder="Ghi chú thêm (nếu có)"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success btn-lg">Gửi đơn hàng</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Liên hệ với chúng tôi</h2>
+      <p class="text-center">Hotline: <strong>0927 001 999</strong> | Email: <strong>nhattran240920@gmail.com</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <h2>Bảng giá</h2>
+    <div class="price-card">
+      <h3>Gói Cơ bản</h3>
+      <p>499.000 VNĐ</p>
+    </div>
+    <div class="price-card">
+      <h3>Gói Cao cấp</h3>
+      <p>899.000 VNĐ</p>
+    </div>
+  </section>
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2025 Pickleball Shop. All rights reserved.</p>
+      <i class="fa-solid fa-circle-user"></i><a href="dki.html"></a></i>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
